@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>schedalarm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+</head>
+<style>
+    html body{
+        height:100%;
+        /* background-color:#ABDBE3 ; */
+        background-image: 
+        url("https://image.winudf.com/v2/image1/Y29tLm1heGxhYi5hbmFsb2djbG9ja3NiYXR0ZXJ5c2F2ZXdhbGxwYXBlcmxpdGVfc2NyZWVuXzhfMTU1NDMxNTkxOV8wMzA/screen-8.jpg?fakeurl=1&type=.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+       
+    }
+    .col-sm-4 {
+      border-width: 10px;
+      border-style:outset;
+    }
+    .form-group{
+        border-width:20px;  
+        border-style:groove;
+    }
+
+    #cen{
+        position: center;
+        margin-top:5%;
+        padding-left: 250px;
+    }
+    
+    th{
+      font-family:Verdana;
+      font-size:20px;
+      border-style:ridge;
+      border-bottom: 5px solid;
+      text-align:center;
+    }
+    h1{
+      font-family:Verdana;
+      font-size:30px;
+    }
+    h2{
+      font-family:Verdana;
+      font-size:40px;
+    }
+
+    
+</style>
+
+
+<body>
+    <br><br>
+    <center>
+
+        <h2><b>SchedAlarm</b></h2>
+    </center>
+    <br>
+    <div class="container" id="cen" >
+        <div class="col-sm-4 bg-success" ><br>
+            <center>
+                <h1> <b>Block 1</b></h1>
+            </center>
+            <br>
+            <div class="form-group">
+                <label>Status:</label>
+                <span class="form-control form-control-sm" id="block1"  value=""></span>
+                <br><br>
+            </div>
+            <div>
+                <center>
+                    <button type="button" class="btn btn-primary" id='btn-paging'>Paging for Someone</button>
+                </center>
+
+            </div>
+            <br><br>
+        </div>
+        <div class="col-sm-4 bg-success" ><br>
+            <center>
+                <h1><b>Block 2</b></h1>
+                <br>
+            </center>
+            <br>
+            <div class="form-group">
+                <label>Status:</label>
+                <span class="form-control form-control-sm" id="block2" value=""></span>
+                <br><br>
+            </div>
+            <div>
+                <center>
+                    <button type="button" class="btn btn-primary" id='btn-paging'>Paging for Someone</button>
+                </center>
+
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <div style="padding-left: 150px;">
+        
+            <button type="button" class="btn btn-primary" onclick="emergency()" id='btn-emergency'>Emergency Alarm</button>
+            <button type="button" class="btn btn-primary" onclick="eatingTime()" id='btn-eating'>Eating Time Alarm</button>
+            <button type="button" class="btn btn-primary" id='btn-usc'>Going to USC Alarm</button>
+            
+       
+    </div>
+    <br><br>
+    <br><br>
+</body>
+
+
+<script src="browser-mqtt.js"></script>
+<script src="ElectiveUI.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+
+
+</html>
