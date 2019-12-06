@@ -22,13 +22,14 @@ def emergency():
     while 1:
         print 'Laser = on'
         GPIO.output(LaserGPIO, GPIO.LOW) # led on
+        time.sleep(20)
         return "Emergency"
 
 def eatingTime():
     while 1:
         print 'Laser=on'
         GPIO.output(LaserGPIO, GPIO.LOW) # led on
-        time.sleep(3)
+        time.sleep(5)
         print 'Laser=off'
         GPIO.output(LaserGPIO, GPIO.HIGH) # led off
         time.sleep(1)
